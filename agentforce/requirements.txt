@@ -1,0 +1,2 @@
+# Python dependencies for Agentforce agent management
+pyyaml>=6.0.1

@@ -272,4 +272,83 @@ You can do this with the LWC on the Experience Cloud Builder:
 3. Choose your own theme color for the component
 4. Set the chatting to start the experience from Voice Mode.
 
+## Agentforce Management
+
+**All agent-related files are in the `agentforce/` directory, separate from the LWC code.**
+
+### Agent Configuration
+
+You can now create and update Agentforce agents using code instead of manual configuration!
+
+### Quick Start with CLI
+
+1. Install the Agentforce CLI plugin:
+```bash
+sf plugins install @salesforce/plugin-agent
+```
+
+2. Deploy your agent:
+```bash
+npm run agent:create
+```
+
+3. The agent configuration is defined in `agentforce/agent-spec.yaml` - edit this file to modify your agent's behavior
+
+### Available Commands
+
+```bash
+# Create/update agent
+npm run agent:create
+
+# List all agents
+npm run agent:list
+
+# Deploy LWC + Agent together
+npm run agent:deploy
+
+# Or use scripts directly
+./agentforce/scripts/deploy.sh [org-alias]
+python3 agentforce/scripts/manage.py create --org [org-alias]
+```
+
+### Synthetic FAQ Data Generation
+
+Generate high-quality banking and wealth management FAQs for Vector Search:
+
+```bash
+# Generate FAQs
+npm run data:generate
+
+# Quick generation (50 FAQs)
+npm run data:generate:quick
+
+# Validate data
+npm run data:validate
+
+# Import to Salesforce
+npm run data:import
+```
+
+**Setup**: See `agentforce/data/SETUP.md` for 5-minute setup guide
+
+**Features**:
+- 300+ FAQs across 20+ categories
+- Optimized for Salesforce Vector Search
+- Automatic validation
+- Multiple export formats (CSV, JSON, JSONL)
+- Direct Salesforce import
+
+### Documentation
+
+- **Agent Management**: See `agentforce/README.md` and `agentforce/docs/`
+- **Data Generation**: See `agentforce/data/README.md` and `agentforce/data/SETUP.md`
+- **Quick Start**: See `agentforce/docs/QUICK_START.md`
+
+### Resources
+
+- [Salesforce CLI Plugin for Agentforce](https://github.com/salesforcecli/plugin-agent)
+- [Agentforce Python SDK Blog](https://developer.salesforce.com/blogs/2025/09/build-and-manage-agents-with-agentforce-python-sdk)
+- [Agent Script Documentation](https://www.salesforce.com/agentforce/script/)
+- [Google Gemini API](https://makersuite.google.com/)
+
 ## Looking Forward

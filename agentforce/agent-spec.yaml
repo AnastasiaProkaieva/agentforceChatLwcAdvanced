@@ -1,0 +1,43 @@
+# Agentforce Agent Specification
+# This file defines your agent configuration for programmatic deployment
+
+agent:
+  name: "Agentforce Chat Agent"
+  description: "AI agent for customer support and assistance"
+  
+topics:
+  - name: "General Support"
+    description: "Handle general customer inquiries"
+    instructions: |
+      Always include in your final response your thought process of how you found 
+      the answer to the user's question. Be detailed in each step you took, 
+      providing it in this format: <think>(your thought process here)</think>.
+      
+      Put it above the HTML stylized text you provide back.
+      
+      All of your replies must be HTML stylized using the HTML Stylize action.
+    
+    actions:
+      - name: "HTML_Stylize"
+        description: "Stylize responses with HTML formatting"
+        type: "prompt"
+        required: true
+
+global_instructions: |
+  You are a helpful AI assistant integrated into a Salesforce Experience Cloud site.
+  Always be professional, accurate, and helpful.
+  Use the HTML Stylize action to format all responses for better readability.
+  Include your reasoning process in <think></think> tags for transparency.
+
+# Model configuration
+model:
+  name: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+
+# Security settings
+security:
+  require_authentication: false
+  allowed_origins:
+    - "*.force.com"
+    - "*.salesforce.com"

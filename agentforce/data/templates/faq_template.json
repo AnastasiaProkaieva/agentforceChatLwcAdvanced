@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "description": "Sample FAQ template for banking and wealth management",
+    "version": "1.0",
+    "created": "2026-01-14"
+  },
+  "faqs": [
+    {
+      "question": "How do I open a new checking account?",
+      "answer": "Opening a new checking account with us is a straightforward process. First, you'll need to gather the required documents: a valid government-issued ID (driver's license or passport), your Social Security number, and proof of address (utility bill or lease agreement). You can open an account three ways: online through our website or mobile app, by visiting any of our branch locations, or by calling our customer service team. The online process typically takes 10-15 minutes and allows you to fund your account immediately via electronic transfer. When opening an account in person, a banker will guide you through the process and answer any questions. You'll need to make an initial deposit, which varies by account type but is typically $25-$100. Once your account is opened, you'll receive your debit card in 7-10 business days, and you can start using online banking immediately. We offer various checking account options including student accounts, interest-bearing accounts, and premium accounts with additional benefits.",
+      "keywords": ["checking account", "open account", "new account", "banking"],
+      "difficulty": "basic",
+      "segment": "retail",
+      "category": "Account Management",
+      "subcategory": "Account Opening"
+    },
+    {
+      "question": "What is a diversified investment portfolio and why do I need one?",
+      "answer": "A diversified investment portfolio is a collection of different types of investments spread across various asset classes, sectors, and geographic regions. The fundamental principle is \"don't put all your eggs in one basket.\" Diversification is crucial because it helps manage risk while pursuing long-term growth. A well-diversified portfolio typically includes a mix of stocks (domestic and international), bonds (government and corporate), real estate investments, and potentially alternative investments like commodities or private equity. The specific allocation depends on your age, risk tolerance, investment timeline, and financial goals. For example, younger investors might have 80-90% in stocks for growth potential, while those nearing retirement might shift to 60% bonds for stability. Diversification works because different asset classes often move independently – when stocks decline, bonds might hold steady or increase. This balance helps smooth out returns over time and reduces the impact of any single investment's poor performance. Studies show that asset allocation (how you divide investments among categories) is more important than individual investment selection in determining long-term returns. Regular rebalancing – adjusting your portfolio back to target allocations – ensures your diversification strategy stays on track as market values change.",
+      "keywords": ["diversification", "portfolio", "investment strategy", "risk management", "asset allocation"],
+      "difficulty": "intermediate",
+      "segment": "wealth_management",
+      "category": "Investment Products",
+      "subcategory": "Portfolio Strategy"
+    },
+    {
+      "question": "How does the estate tax exemption work and how can I plan for it?",
+      "answer": "The federal estate tax exemption is the amount of assets you can pass to heirs without incurring federal estate taxes. As of 2024, this exemption is $13.61 million per individual ($27.22 million for married couples). This means if your estate is valued below this threshold, your heirs won't owe federal estate taxes. However, it's important to note that this exemption is scheduled to sunset in 2026, potentially reverting to approximately $7 million (adjusted for inflation). Effective estate planning involves several strategies: First, consider lifetime gifting – you can give up to $18,000 per person per year (2024) without using any exemption. Second, establish trusts such as irrevocable life insurance trusts (ILITs) to remove life insurance proceeds from your taxable estate, or qualified personal residence trusts (QPRTs) to transfer home value at reduced tax cost. Third, make charitable contributions which can reduce estate size while benefiting causes you care about. Fourth, ensure proper beneficiary designations on retirement accounts and life insurance, as these pass outside probate. For married couples, portability allows the surviving spouse to use any unused exemption from the deceased spouse. Additionally, some states have their own estate or inheritance taxes with lower exemptions, so state-level planning is crucial. Working with an estate planning attorney and wealth advisor ensures your plan addresses both current laws and potential future changes while aligning with your family's specific needs and goals.",
+      "keywords": ["estate tax", "estate planning", "tax exemption", "wealth transfer", "trusts"],
+      "difficulty": "advanced",
+      "segment": "wealth_management",
+      "category": "Estate Planning",
+      "subcategory": "Tax Planning"
+    },
+    {
+      "question": "What security measures should I take when using online banking?",
+      "answer": "Online banking security requires a multi-layered approach to protect your accounts and personal information. Start with strong, unique passwords for your banking accounts – use at least 12 characters combining uppercase, lowercase, numbers, and symbols. Never reuse passwords across sites. Enable two-factor authentication (2FA) whenever available, which adds an extra verification step beyond your password. Keep your devices secure by installing reputable antivirus software, keeping operating systems and apps updated, and avoiding jailbroken or rooted devices. Only access your bank accounts on secure, private networks – never use public Wi-Fi for banking transactions. If you must use public Wi-Fi, use a Virtual Private Network (VPN). Be vigilant against phishing attempts: banks will never ask for passwords or sensitive information via email or text. Verify website URLs before entering credentials, looking for 'https://' and the padlock icon. Set up account alerts to notify you of transactions, login attempts, and balance changes. Review your statements regularly for unauthorized activity. Use mobile banking apps rather than mobile browsers when possible, as apps often have additional security features. Log out completely after each session and avoid saving login credentials in your browser. Consider using a dedicated device or browser profile exclusively for banking. If your device is lost or stolen, immediately contact your bank and change passwords. Remember, banks have sophisticated fraud detection systems, but your vigilance is the first line of defense against cyber threats.",
+      "keywords": ["online banking", "security", "cybersecurity", "fraud prevention", "two-factor authentication"],
+      "difficulty": "intermediate",
+      "segment": "retail",
+      "category": "Online Banking Security",
+      "subcategory": "Account Protection"
+    },
+    {
+      "question": "Should I pay off my mortgage early or invest the extra money?",
+      "answer": "This is one of the most common financial dilemmas, and the answer depends on several personal factors. From a purely mathematical standpoint, compare your mortgage interest rate to potential investment returns. If your mortgage rate is 3% and you can earn 7-8% annually in a diversified portfolio, investing may yield better long-term results. However, the decision isn't purely mathematical. Consider these factors: First, risk tolerance – paying off your mortgage is a guaranteed return equal to your interest rate, while investment returns fluctuate. Second, liquidity needs – money paid toward your mortgage is locked in your home equity and not easily accessible, while investments remain relatively liquid. Third, tax implications – mortgage interest may be tax-deductible (though less valuable after recent tax law changes), while investment gains are taxable. Fourth, emotional factors – some people value the peace of mind of owning their home outright, which has real psychological value. Fifth, your overall financial situation – ensure you have an adequate emergency fund (3-6 months expenses) and are maximizing retirement contributions before making extra mortgage payments. A balanced approach might be optimal: take advantage of employer retirement matching, maintain emergency savings, then split extra funds between mortgage principal and investments. This provides diversification across asset types while making progress on both fronts. For those nearing retirement, eliminating the mortgage payment can significantly reduce required retirement income, making it an attractive option. Consider consulting with a financial advisor who can analyze your specific situation, including your age, income, total debt, and retirement timeline.",
+      "keywords": ["mortgage", "investing", "debt payoff", "financial planning", "retirement planning"],
+      "difficulty": "intermediate",
+      "segment": "retail",
+      "category": "Loans and Mortgages",
+      "subcategory": "Debt Management"
+    }
+  ]
+}

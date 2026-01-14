@@ -52,8 +52,8 @@ public without sharing class MessengerChatController {
             Map<String, Object> payload = new Map<String, Object>{
                 'externalSessionKey'    => generateUUID(),
                 'instanceConfig'        => new Map<String, Object>{ 'endpoint' => URL.getOrgDomainUrl().toExternalForm() },
-                'streamingCapabilities' => new Map<String, Object>{ 'chunkTypes' => new List<String>{ 'Text' } },
-                'bypassUser'            => true
+                'streamingCapabilities' => new Map<String, Object>{ 'chunkTypes' => new List<String>{ 'Text' } }
+                // Removed bypassUser - agent requires user context
             };
             String requestBody = JSON.serialize(payload);
             System.debug('Request payload: ' + requestBody);

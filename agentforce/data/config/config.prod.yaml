@@ -1,0 +1,20 @@
+# Production Environment Configuration
+# Optimized for quality and completeness
+
+model:
+  name: "gemini-1.5-pro"  # Best quality model
+  temperature: 0.7
+  max_tokens: 8192
+
+generation:
+  batch_size: 10
+  rate_limit_delay: 2
+  retry_attempts: 5  # More retries in prod
+  retry_delay: 10
+
+quality:
+  min_answer_length: 150  # Stricter quality requirements
+  max_answer_length: 2000
+  min_keywords: 3
+
+# Full category set (use all from main config.yaml)

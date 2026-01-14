@@ -1,0 +1,19 @@
+# Core dependencies for FAQ data generation
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Salesforce integration
+simple-salesforce>=1.12.0
+
+# Data validation
+jsonschema>=4.17.0
+
+# Progress tracking
+tqdm>=4.65.0
+
+# Optional: for advanced text processing
+nltk>=3.8.0

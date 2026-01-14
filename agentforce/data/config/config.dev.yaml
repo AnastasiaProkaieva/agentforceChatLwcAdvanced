@@ -1,0 +1,22 @@
+# Development Environment Configuration
+# Override settings for local development
+
+model:
+  name: "gemini-1.5-flash"  # Use faster model for dev
+  temperature: 0.8
+  max_tokens: 4096
+
+generation:
+  batch_size: 5  # Smaller batches for testing
+  rate_limit_delay: 1
+
+# Reduced categories for faster testing
+categories:
+  "Account Management": 5
+  "Investment Products": 5
+  "Online Banking Security": 5
+  "Loans and Mortgages": 5
+
+quality:
+  min_answer_length: 50  # More lenient for testing
+  max_answer_length: 3000

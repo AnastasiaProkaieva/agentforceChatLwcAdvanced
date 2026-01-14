@@ -1,0 +1,165 @@
+# FAQ Generation Configuration
+# This file contains prompts and model settings (safe to version control)
+
+# Model Configuration
+model:
+  name: "gemini-1.5-pro"  # Options: gemini-1.5-pro, gemini-1.5-flash, gemini-1.0-pro
+  temperature: 0.7
+  max_tokens: 8192
+  
+# Alternative models (uncomment to use)
+# model:
+#   name: "gemini-1.5-flash"  # Faster, cheaper
+#   temperature: 0.8
+#   max_tokens: 4096
+
+# Generation Settings
+generation:
+  batch_size: 10
+  rate_limit_delay: 2  # seconds between batches
+  retry_attempts: 3
+  retry_delay: 5
+
+# Quality Thresholds
+quality:
+  min_question_length: 10
+  max_question_length: 500
+  min_answer_length: 100
+  max_answer_length: 2000
+  min_keywords: 1
+  max_keywords: 10
+
+# Prompt Templates
+prompts:
+  # Main FAQ Generation Prompt
+  generate_faqs: |
+    Generate {count} realistic FAQ entries for "{category}" in banking and wealth management.
+
+    Requirements:
+    1. Questions should be natural, varied, and reflect real customer concerns
+    2. Answers should be comprehensive (200-400 words), professional, and accurate
+    3. Include specific details, examples, and actionable advice
+    4. Cover both basic and advanced scenarios
+    5. Include regulatory/compliance information where relevant
+
+    For each FAQ, provide:
+    - question: The customer's question (natural phrasing)
+    - answer: Detailed, professional answer with examples
+    - keywords: 3-5 relevant keywords for search
+    - difficulty: "basic", "intermediate", or "advanced"
+    - segment: "retail", "business", or "wealth_management"
+    - subcategory: More specific classification within {category}
+
+    Return ONLY valid JSON array (no markdown, no extra text):
+    [
+      {{
+        "question": "question text here",
+        "answer": "detailed answer here",
+        "keywords": ["keyword1", "keyword2", "keyword3"],
+        "difficulty": "basic",
+        "segment": "retail",
+        "subcategory": "specific subcategory",
+        "category": "{category}"
+      }}
+    ]
+
+    Make questions diverse - include:
+    - "How do I..." questions
+    - "What is..." questions
+    - "Can I..." questions
+    - "Why should..." questions
+    - Scenario-based questions
+
+  # Quick Generation Prompt (Simplified)
+  quick_generate: |
+    Generate {count} diverse banking and wealth management FAQs.
+
+    Categories to cover:
+    - Account management (checking, savings, deposits)
+    - Credit cards and rewards
+    - Loans (personal, auto, mortgage)
+    - Investment products (stocks, bonds, mutual funds)
+    - Retirement planning (401k, IRA, pension)
+    - Wealth management services
+    - Online banking and security
+    - Wire transfers and payments
+    - Foreign exchange
+    - Tax planning and optimization
+    - Insurance products
+
+    Format as JSON array (no markdown, just JSON):
+    [
+      {{
+        "question": "natural customer question",
+        "answer": "detailed professional answer (200-300 words)",
+        "category": "category name",
+        "keywords": ["keyword1", "keyword2", "keyword3"]
+      }}
+    ]
+
+    Make questions natural and varied. Include:
+    - How-to questions
+    - What-is questions  
+    - Troubleshooting questions
+    - Best practice questions
+    - Scenario-based questions
+
+    Answers should be comprehensive, professional, and include specific examples.
+
+  # Batch Generation Prompt
+  batch_generate: |
+    Generate {batch_size} unique FAQs for "{category}" in banking/wealth management.
+
+    This is batch {batch_num} of {total_batches}, so ensure variety and avoid repetition.
+
+    Return JSON array:
+    [
+      {{
+        "question": "question text",
+        "answer": "detailed answer (200-300 words)",
+        "keywords": ["keyword1", "keyword2"],
+        "difficulty": "basic|intermediate|advanced",
+        "segment": "retail|business|wealth_management"
+      }}
+    ]
+
+    Only return valid JSON, no markdown.
+
+# FAQ Categories (category: count)
+categories:
+  "Account Management": 15
+  "Credit Cards": 15
+  "Loans and Mortgages": 20
+  "Investment Products": 20
+  "Retirement Planning": 20
+  "Wealth Management Services": 25
+  "Online Banking Security": 15
+  "Wire Transfers and Payments": 15
+  "Foreign Exchange": 12
+  "Tax Planning": 18
+  "Estate Planning": 15
+  "Insurance Products": 12
+  "Small Business Banking": 15
+  "Corporate Banking": 12
+  "Regulatory Compliance": 10
+  "Financial Planning": 18
+  "Portfolio Management": 15
+  "Trust Services": 10
+  "Private Banking": 12
+  "Asset Protection": 10
+
+# Export Settings
+export:
+  csv:
+    enabled: true
+    filename: "banking_faqs.csv"
+  json:
+    enabled: true
+    filename: "banking_faqs.json"
+    pretty_print: true
+  jsonl:
+    enabled: true
+    filename: "banking_faqs_vectorsearch.jsonl"
+  report:
+    enabled: true
+    filename: "generation_report.json"
